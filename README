@@ -1,0 +1,26 @@
+The script in this directory simulates a different way of allocating
+electors in U.S. presidential elections.  Most states allocate electors
+by a winner-take-all rule; Maine and Nebraska allocate electors
+separately to the winners statewide and within each Congressional
+District in the state.  Some states have committed to allocate their
+electors to the winner of the national popular vote, but this commitment
+is inoperative until states representing a majority of electors enact
+similar legislation.
+
+In this implementation, states allocate presidential electors using
+what is known alternatively as Jefferson's Method and the d'Hondt Count.
+Thomas Jefferson used it to compute the original apportionment of House
+seats in the first Congress, and thus also in the original configuration
+of the Electoral College -- but Jefferson was allocating seats among
+states according to their population (a different method is used now),
+whereas here we allocate individual pledged electors among the different
+candidates WITHIN a state in proportion to the votes for each of ticket.
+
+The script pres.pl in this directory takes as input a CSV file
+containing the popular vote counts for all candidates in each state,
+and outputs the allocation of electors for each state and the national
+total.  Included are data files for the 2000 through 2016 presidential
+elections.  The 2004-2012 data files are based on published vote
+certifications in the National Archives.  The 2016 data comes from 
+Google searches (representing a combination of Politico and state election
+officials' official sites).  The 2000 data comes from Wikipedia.
