@@ -10,7 +10,7 @@ my %state_result;
 
 @candidates = @{$row}[2..$#$row];
 
-print STDOUT ("Candidates are: ", join(@candidates, ", "), "\n");
+print STDOUT ("Candidates are: ", join(", ", @candidates), "\n");
 
 while (defined ($row = $csv->getline(\*ARGV))) {
     my ($state, $ev);
